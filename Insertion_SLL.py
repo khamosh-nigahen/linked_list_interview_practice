@@ -26,9 +26,12 @@ class singleLinkedList(object):
         self.head = new_node
 
     def insertAfterNode(self, data, prev_node):
-        new_node = Node(data)
-        new_node.nextNode = prev_node.nextNode
-        prev_node.nextNode = new_node
+        if prev_node is None:
+            print("Please provide Node which exits in the linked list")
+        else:
+            new_node = Node(data)
+            new_node.nextNode = prev_node.nextNode
+            prev_node.nextNode = new_node
 
     def pushAttail(self, data):
         new_node = Node(4)
