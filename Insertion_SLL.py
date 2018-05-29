@@ -35,9 +35,11 @@ class singleLinkedList(object):
 
     def pushAttail(self, data):
         new_node = Node(4)
-        third.nextNode = new_node
+        temp = self.head
+        while(temp.nextNode != None):
+            temp = temp.nextNode
+        temp.nextNode = new_node
         new_node.nextNode = None
-
 
 if __name__ == "__main__":
     sllist = singleLinkedList()
